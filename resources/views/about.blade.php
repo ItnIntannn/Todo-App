@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY ABOUT</title>
-</head>
-<body>
-    <H2>TENTANG SAYA</H2>
-</body>
-</html>
+@extends('template')
+
+@section('judul'. 'About')
+
+@section('content')
+    <h2>Ini adalah halaman about</h2>   
+@endsection
+    
+
