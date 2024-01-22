@@ -70,6 +70,12 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/about', [HomeController::class, 'about']);
 
+Route::get('/add', [HomeController::class, 'tambah']);
+
+Route::post('/save', [HomeController::class, 'simpan']);
+
+
+
 Route::get('/test', [HomeController::class, 'test']);
 
-Route::get('/test/{id}', [HomeController::class, 'test']);
+// Route::get('/test/{id}', [HomeController::class, 'test']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -16,10 +17,67 @@ class HomeController extends Controller
         return view('about');
     }
 
-    public function test($id = 0)
+    public function tambah()
     {
-        $nama = 'IK2';
+        return view('input');
+    }
 
-        return view('test', ['nama' => $nama, 'id' => $id ]);
+    public function simpan(Request $request)
+    {
+        // $nama = 'IK2';
+        // return view('test', ['nama' => $nama, 'id' => $id ]);
+
+        $nama = $request->input('nama');
+        $kategori = $request->input('kategori');
+        $harga = $request->input('harga');
+        $ket = $request->input('ket');
+
+        return view('result', [
+            'nama' => $nama,
+            'kategori' => $kategori,
+            'harga' => $harga,
+            'keterangan' => $ket,
+        ]);
+    }
+
+    public function test()
+    {
+        // query builder untuk insert 1 data ke dalam table makanans
+        // DB::table('makanans')->insert([
+        //     'nama' => 'Burger',
+        //     'kategori' => 'makanan',
+        //     'harga' => '12.000',
+        //     'ket' => 'dijual',
+        // ])
+
+        // query builder untuk insert 1 data ke dalam table makanans
+        // DB::table('makanans')->insert([
+        //    [ 
+        //        'nama' => 'Burger',
+        //        'kategori' => 'makanan',
+        //        'harga' => '12.000',
+        //        'ket' => 'dijual'                                                                            
+        //    ],
+        //    [
+        //        'nama' => 'Burger',
+        //        'kategori' => 'makanan',
+        //        'harga' => '12.000',
+        //        'ket' => 'dijual'            
+        //    ],
+        //    [
+        //        'nama' => 'Burger',
+        //        'kategori' => 'makanan',
+        //        'harga' => '12.000',
+        //        'ket' => 'dijual'            
+        //    ],
+        //    [
+        //     'nama' => 'Burger',
+        //     'kategori' => 'makanan',
+        //     'harga' => '12.000',
+        //     'ket' => 'dijual'            
+        //    ],
+           
+        // ])
+
     }
 }
