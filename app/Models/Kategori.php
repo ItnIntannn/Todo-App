@@ -9,9 +9,11 @@ class Kategori extends Model
 {
     use HasFactory;
 
-    protected $table = 'kategori';
+    protected $table = 'kategoris';
 
     protected $primaryKey = 'kode_kategori';
+
+    protected $keyType = 'string';
 
     protected $fillable = [
         'kode_kategori',
