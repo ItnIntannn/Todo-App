@@ -1,0 +1,15 @@
+.navbar-custom {
+    /* background-image: url(images/bg-menu.jpg); */
+ 
+    background-image: url(public/bg-nav.jpg);
+
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+ 
+li.active {
+     background-image: url(public/bg-menu-hover.png);
+}
+
+.footer {
+    background-color: #0F3065;
+}
